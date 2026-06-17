@@ -9,28 +9,21 @@ const Location = () => {
         <h2 className="section-title">오시는 길</h2>
         
         <div className="location-container">
-          <div className="map-placeholder" style={{ padding: 0, overflow: 'hidden', display: 'block' }}>
-            {/* 임베딩을 위한 iframe 사용 (브라우저 정책에 따라 화면이 제한될 수 있으므로 링크 버튼도 함께 제공) */}
-            <iframe 
-              src="https://naver.me/5jXbqxMg" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0, minHeight: '400px' }} 
-              allowFullScreen="" 
-              loading="lazy"
-              title="마중물 선교센터 위치"
-            ></iframe>
-          </div>
-          
-          <div className="text-center mb-8">
-            <a 
-              href="https://naver.me/5jXbqxMg" 
-              target="_blank" 
-              rel="noreferrer"
-              className="btn-map"
-            >
-              네이버 지도 큰 화면으로 보기
-            </a>
+          <div className="map-placeholder">
+            <div className="map-ui">
+              <MapPin size={48} className="map-icon" style={{ margin: '0 auto' }} />
+              <p style={{ marginTop: '1rem', marginBottom: '0.5rem', fontSize: '1.1rem' }}>
+                아래 버튼을 눌러 네이버 지도에서<br/>상세한 위치와 길찾기를 확인해 보세요.
+              </p>
+              <a 
+                href="https://naver.me/5jXbqxMg" 
+                target="_blank" 
+                rel="noreferrer"
+                className="btn-map"
+              >
+                네이버 지도 열기
+              </a>
+            </div>
           </div>
           
           <div className="address-info grid grid-cols-2 gap-8">
