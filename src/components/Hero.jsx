@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <video className="hero-video" autoPlay loop muted playsInline>
-        <source src="/bg-video.mp4" type="video/mp4" />
+        <source src={`${import.meta.env.BASE_URL}bg-video.mp4`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="hero-overlay"></div>

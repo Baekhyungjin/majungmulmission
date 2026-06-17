@@ -18,7 +18,7 @@ const FloatingAudio = () => {
   return (
     <div className={`floating-audio ${isPlaying ? 'playing' : ''}`}>
       <audio ref={audioRef} loop>
-        <source src="/bg-music.mp3" type="audio/mpeg" />
+        <source src={`${import.meta.env.BASE_URL}bg-music.mp3`} type="audio/mpeg" />
       </audio>
       
       <div className="audio-info">

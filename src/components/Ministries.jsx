@@ -60,8 +60,8 @@ const Ministries = () => {
 
         {/* Combined Banner Section */}
         <div className="ministry-banner">
-          <img src="/image1.png" alt="마중물 선교센터 안내 1" className="banner-img" />
-          <img src="/image2.png" alt="마중물 선교센터 안내 2" className="banner-img" />
+          <img src={`${import.meta.env.BASE_URL}image1.png`} alt="사역 이미지 1" className="banner-img" />
+          <img src={`${import.meta.env.BASE_URL}image2.png`} alt="사역 이미지 2" className="banner-img" />
         </div>
       </div>
     </section>
