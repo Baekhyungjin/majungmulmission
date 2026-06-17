@@ -1,0 +1,68 @@
+.floating-audio {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--white);
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  gap: 1rem;
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--divider);
+}
+
+.floating-audio:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.floating-audio.playing {
+  border-color: var(--primary);
+  box-shadow: 0 4px 15px rgba(26, 86, 219, 0.2);
+}
+
+.audio-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.music-icon {
+  color: var(--primary);
+}
+
+.floating-play-btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(26, 86, 219, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.floating-play-btn:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .floating-audio {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem;
+  }
+  .audio-info {
+    display: none; /* Hide text on mobile, just show button */
+  }
+}
